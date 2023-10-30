@@ -1,0 +1,1243 @@
+<?xml version="1.0" ?>
+<Queries>
+  <Query id="1">
+    <Value>SELECT lat, lon, points.name, descr, pointid, pointid _id, pointid ID, category.iconid, category.name as catname FROM points LEFT JOIN category ON category.categoryid = points.categoryid ORDER BY {{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>84</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_GET_POI_LIST + sortColNames,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getPoiListCursor(java.lang.String)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="81" callLine="84"></Call>
+      <Call method="com.robert.maps.applib.kml.PoiListActivity.FillData()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/PoiListActivity.java" methodLine="79" callLine="80"></Call>
+    </CallStack>
+  </Query>
+  <Query id="2">
+    <Value>SELECT lat, lon, points.name, descr, pointid, pointid _id, pointid ID, category.iconid, category.name as catname FROM points LEFT JOIN category ON category.categoryid = points.categoryid ORDER BY lat, lon</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>84</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_GET_POI_LIST + sortColNames,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getPoiListCursor(java.lang.String)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="81" callLine="84"></Call>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getPoiListCursor()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="77" callLine="78"></Call>
+    </CallStack>
+  </Query>
+  <Query id="3">
+    <Value>SELECT poi.lat, poi.lon, poi.name, poi.descr, poi.pointid, poi.pointid _id, poi.pointid ID, poi.categoryid, cat.iconid FROM points poi LEFT JOIN category cat ON cat.categoryid = poi.categoryid WHERE poi.hidden = 0 AND cat.hidden = 0 AND cat.minzoom &lt;= @1 AND poi.lon BETWEEN @2 AND @3 AND poi.lat BETWEEN @4 AND @5 ORDER BY lat, lon</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>94</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_PoiListNotHidden,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getPoiListNotHiddenCursor(int,double,double,double,double)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="90" callLine="94"></Call>
+    </CallStack>
+  </Query>
+  <Query id="4">
+    <Value>SELECT name, iconid, categoryid _id, hidden FROM category ORDER BY name</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>103</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_PoiCategoryList,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getPoiCategoryListCursor()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="100" callLine="103"></Call>
+    </CallStack>
+  </Query>
+  <Query id="5">
+    <Value>SELECT name, activityid _id FROM activity ORDER BY activityid</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>112</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_ActivityList,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getActivityListCursor()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="109" callLine="112"></Call>
+    </CallStack>
+  </Query>
+  <Query id="6">
+    <Value>SELECT lat, lon, name, descr, pointid, alt, hidden, categoryid, pointsourceid, iconid FROM points WHERE pointid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>122</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_getPoi,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getPoi(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="118" callLine="122"></Call>
+    </CallStack>
+  </Query>
+  <Query id="7">
+    <Value>DELETE FROM points WHERE pointid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>131</ExecLine>
+    <ExecString>mDatabase.execSQL(STAT_deletePoi,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.deletePoi(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="128" callLine="131"></Call>
+    </CallStack>
+  </Query>
+  <Query id="8">
+    <Value>DELETE FROM category WHERE categoryid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>138</ExecLine>
+    <ExecString>mDatabase.execSQL(STAT_deletePoiCategory,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.deletePoiCategory(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="135" callLine="138"></Call>
+    </CallStack>
+  </Query>
+  <Query id="9">
+    <Value>CREATE TABLE 'points' (pointid INTEGER NOT NULL PRIMARY KEY UNIQUE,name VARCHAR,descr VARCHAR,lat FLOAT DEFAULT '0',lon FLOAT DEFAULT '0',alt FLOAT DEFAULT '0',hidden INTEGER DEFAULT '0',categoryid INTEGER,pointsourceid INTEGER,iconid INTEGER DEFAULT NULL);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>197</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_points)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="197"></Call>
+    </CallStack>
+  </Query>
+  <Query id="10">
+    <Value>CREATE TABLE IF NOT EXISTS 'pointsource' (pointsourceid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>198</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_pointsource)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="198"></Call>
+    </CallStack>
+  </Query>
+  <Query id="11">
+    <Value>CREATE TABLE 'category' (categoryid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, hidden INTEGER DEFAULT '0', iconid INTEGER DEFAULT NULL, minzoom INTEGER DEFAULT '14');</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>199</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_category)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="199"></Call>
+    </CallStack>
+  </Query>
+  <Query id="12">
+    <Value>INSERT INTO 'category' (categoryid, name, hidden, iconid) VALUES (0, 'My POI', 0, 2130837516);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>200</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_ADD_category)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="200"></Call>
+    </CallStack>
+  </Query>
+  <Query id="13">
+    <Value>CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>201</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_tracks)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="201"></Call>
+    </CallStack>
+  </Query>
+  <Query id="14">
+    <Value>CREATE TABLE IF NOT EXISTS 'trackpoints' (trackid INTEGER NOT NULL, id INTEGER NOT NULL PRIMARY KEY UNIQUE, lat FLOAT, lon FLOAT, alt FLOAT, speed FLOAT, date DATETIME);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>202</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_trackpoints)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="202"></Call>
+    </CallStack>
+  </Query>
+  <Query id="15">
+    <Value>CREATE TABLE IF NOT EXISTS 'maps' (mapid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, type INTEGER, params VARCHAR)</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>203</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_maps)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="203"></Call>
+    </CallStack>
+  </Query>
+  <Query id="16">
+    <Value>CREATE TABLE IF NOT EXISTS 'routes' (routeid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, style VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>204</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_routes)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="195" callLine="204"></Call>
+    </CallStack>
+  </Query>
+  <Query id="17">
+    <Value>DROP TABLE IF EXISTS 'points_45392250'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>214</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_1)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="214"></Call>
+    </CallStack>
+  </Query>
+  <Query id="18">
+    <Value>CREATE TABLE 'points_45392250' AS SELECT * FROM 'points';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>215</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_2)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="215"></Call>
+    </CallStack>
+  </Query>
+  <Query id="19">
+    <Value>DROP TABLE 'points';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>216</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_3)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="216"></Call>
+    </CallStack>
+  </Query>
+  <Query id="20">
+    <Value>CREATE TABLE 'points' (pointid INTEGER NOT NULL PRIMARY KEY UNIQUE,name VARCHAR,descr VARCHAR,lat FLOAT DEFAULT '0',lon FLOAT DEFAULT '0',alt FLOAT DEFAULT '0',hidden INTEGER DEFAULT '0',categoryid INTEGER,pointsourceid INTEGER,iconid INTEGER DEFAULT NULL);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>217</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_points)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="217"></Call>
+    </CallStack>
+  </Query>
+  <Query id="21">
+    <Value>INSERT INTO 'points' (pointid, name, descr, lat, lon, alt, hidden, categoryid, pointsourceid, iconid) SELECT pointid, name, descr, lat, lon, alt, hidden, categoryid, pointsourceid, 2130837514 FROM 'points_45392250';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>218</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_5)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="218"></Call>
+    </CallStack>
+  </Query>
+  <Query id="22">
+    <Value>DROP TABLE 'points_45392250';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>219</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_6)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="219"></Call>
+    </CallStack>
+  </Query>
+  <Query id="23">
+    <Value>DROP TABLE IF EXISTS 'category_46134312'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>220</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_7)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="220"></Call>
+    </CallStack>
+  </Query>
+  <Query id="24">
+    <Value>CREATE TABLE 'category_46134312' AS SELECT * FROM 'category';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>221</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_8)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="221"></Call>
+    </CallStack>
+  </Query>
+  <Query id="25">
+    <Value>DROP TABLE 'category';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>222</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_1_9)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="222"></Call>
+    </CallStack>
+  </Query>
+  <Query id="26">
+    <Value>CREATE TABLE 'category' (categoryid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, hidden INTEGER DEFAULT '0', iconid INTEGER DEFAULT NULL, minzoom INTEGER DEFAULT '14');</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>223</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_category)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="223"></Call>
+    </CallStack>
+  </Query>
+  <Query id="27">
+    <Value>INSERT INTO 'category' (categoryid, name, hidden, iconid) VALUES (0, 'My POI', 0, 2130837516);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>224</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_ADD_category)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="224"></Call>
+    </CallStack>
+  </Query>
+  <Query id="28">
+    <Value>DROP TABLE IF EXISTS 'category_46134313'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>229</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_2_7)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="229"></Call>
+    </CallStack>
+  </Query>
+  <Query id="29">
+    <Value>CREATE TABLE 'category_46134313' AS SELECT * FROM 'category';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>230</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_2_8)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="230"></Call>
+    </CallStack>
+  </Query>
+  <Query id="30">
+    <Value>DROP TABLE 'category';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>231</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_2_9)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="231"></Call>
+    </CallStack>
+  </Query>
+  <Query id="31">
+    <Value>CREATE TABLE 'category' (categoryid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, hidden INTEGER DEFAULT '0', iconid INTEGER DEFAULT NULL, minzoom INTEGER DEFAULT '14');</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>232</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_category)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="232"></Call>
+    </CallStack>
+  </Query>
+  <Query id="32">
+    <Value>INSERT INTO 'category' (categoryid, name, hidden, iconid) SELECT categoryid, name, hidden, iconid FROM 'category_46134313';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>233</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_2_11)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="233"></Call>
+    </CallStack>
+  </Query>
+  <Query id="33">
+    <Value>DROP TABLE 'category_46134313';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>234</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_2_12)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="234"></Call>
+    </CallStack>
+  </Query>
+  <Query id="34">
+    <Value>CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>237</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_tracks)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="237"></Call>
+    </CallStack>
+  </Query>
+  <Query id="35">
+    <Value>CREATE TABLE IF NOT EXISTS 'trackpoints' (trackid INTEGER NOT NULL, id INTEGER NOT NULL PRIMARY KEY UNIQUE, lat FLOAT, lon FLOAT, alt FLOAT, speed FLOAT, date DATETIME);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>238</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_trackpoints)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="238"></Call>
+    </CallStack>
+  </Query>
+  <Query id="36">
+    <Value>DROP TABLE IF EXISTS 'tracks_46134313'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>241</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_1)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="241"></Call>
+    </CallStack>
+  </Query>
+  <Query id="37">
+    <Value>CREATE TABLE 'tracks_46134313' AS SELECT * FROM 'tracks'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>242</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_2)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="242"></Call>
+    </CallStack>
+  </Query>
+  <Query id="38">
+    <Value>DROP TABLE IF EXISTS 'tracks'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>243</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_3)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="243"></Call>
+    </CallStack>
+  </Query>
+  <Query id="39">
+    <Value>CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>244</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_tracks)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="244"></Call>
+    </CallStack>
+  </Query>
+  <Query id="40">
+    <Value>INSERT INTO 'tracks' (trackid, name, descr, date, show, cnt, duration, distance, categoryid, activity) SELECT trackid, name, descr, date, show, (SELECT COUNT(*) FROM trackpoints WHERE trackid = tracks_46134313.trackid), null, null, null, 0 FROM 'tracks_46134313';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>245</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_4)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="245"></Call>
+    </CallStack>
+  </Query>
+  <Query id="41">
+    <Value>DROP TABLE 'tracks_46134313';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>246</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_5)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="246"></Call>
+    </CallStack>
+  </Query>
+  <Query id="42">
+    <Value>DROP TABLE IF EXISTS 'tracks_46134313'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>250</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_1)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="250"></Call>
+    </CallStack>
+  </Query>
+  <Query id="43">
+    <Value>CREATE TABLE 'tracks_46134313' AS SELECT * FROM 'tracks'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>251</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_2)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="251"></Call>
+    </CallStack>
+  </Query>
+  <Query id="44">
+    <Value>DROP TABLE IF EXISTS 'tracks'; </Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>252</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_3)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="252"></Call>
+    </CallStack>
+  </Query>
+  <Query id="45">
+    <Value>CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>253</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_tracks)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="253"></Call>
+    </CallStack>
+  </Query>
+  <Query id="46">
+    <Value>INSERT INTO 'tracks' (trackid, name, descr, date, show, cnt, duration, distance, categoryid, activity, style) SELECT trackid, name, descr, date, show, cnt, duration, distance, categoryid, activity, '' FROM 'tracks_46134313';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>254</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_20_1)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="254"></Call>
+    </CallStack>
+  </Query>
+  <Query id="47">
+    <Value>DROP TABLE 'tracks_46134313';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>255</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_UPDATE_6_5)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="255"></Call>
+    </CallStack>
+  </Query>
+  <Query id="48">
+    <Value>CREATE TABLE IF NOT EXISTS 'maps' (mapid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, type INTEGER, params VARCHAR)</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>258</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_maps)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="258"></Call>
+    </CallStack>
+  </Query>
+  <Query id="49">
+    <Value>CREATE TABLE IF NOT EXISTS 'routes' (routeid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, style VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>261</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_routes)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.GeoDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="208" callLine="261"></Call>
+    </CallStack>
+  </Query>
+  <Query id="50">
+    <Value>SELECT name, categoryid, hidden, iconid, minzoom FROM category WHERE categoryid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>271</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_getPoiCategory,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getPoiCategory(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="267" callLine="271"></Call>
+    </CallStack>
+  </Query>
+  <Query id="51">
+    <Value>DROP TABLE IF EXISTS 'activity';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>278</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_drop_activity)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.LoadActivityListFromResource(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="277" callLine="278"></Call>
+    </CallStack>
+  </Query>
+  <Query id="52">
+    <Value>CREATE TABLE 'activity' (activityid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>279</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_activity)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.LoadActivityListFromResource(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="277" callLine="279"></Call>
+    </CallStack>
+  </Query>
+  <Query id="53">
+    <Value>{{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>282</ExecLine>
+    <ExecString>db.execSQL(String.format(PoiConstants.SQL_CREATE_insert_activity,i,act[i]))</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.LoadActivityListFromResource(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="277" callLine="282"></Call>
+    </CallStack>
+  </Query>
+  <Query id="54">
+    <Value>DELETE FROM points</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>314</ExecLine>
+    <ExecString>mDatabase.execSQL(STAT_DeleteAllPoi)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.DeleteAllPoi()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="312" callLine="314"></Call>
+    </CallStack>
+  </Query>
+  <Query id="55">
+    <Value>{{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>338</ExecLine>
+    <ExecString>mDatabase.rawQuery(String.format(STAT_getTrackList + sortColNames,units),null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getTrackListCursor(java.lang.String,java.lang.String)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="335" callLine="338"></Call>
+    </CallStack>
+  </Query>
+  <Query id="56">
+    <Value>SELECT name, descr, show, trackid, cnt, distance, duration, categoryid, activity, date, style FROM tracks WHERE show = 1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>402</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_getTrackChecked,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getTrackChecked()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="399" callLine="402"></Call>
+    </CallStack>
+  </Query>
+  <Query id="57">
+    <Value>SELECT name, descr, show, cnt, distance, duration, categoryid, activity, date, style FROM tracks WHERE trackid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>412</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_getTrack,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getTrack(long)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="408" callLine="412"></Call>
+    </CallStack>
+  </Query>
+  <Query id="58">
+    <Value>SELECT lat, lon, alt, speed, date FROM trackpoints WHERE trackid = @1 ORDER BY id</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>422</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_getTrackPoints,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getTrackPoints(long)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="418" callLine="422"></Call>
+    </CallStack>
+  </Query>
+  <Query id="59">
+    <Value>UPDATE tracks SET show = 1 - show * 1 WHERE trackid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>431</ExecLine>
+    <ExecString>mDatabase.execSQL(STAT_setTrackChecked_1,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.setTrackChecked(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="428" callLine="431"></Call>
+    </CallStack>
+  </Query>
+  <Query id="60">
+    <Value>UPDATE category SET hidden = 1 - hidden * 1 WHERE categoryid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>439</ExecLine>
+    <ExecString>mDatabase.execSQL(STAT_setCategoryHidden,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.setCategoryHidden(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="436" callLine="439"></Call>
+    </CallStack>
+  </Query>
+  <Query id="61">
+    <Value>DELETE FROM trackpoints WHERE trackid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>447</ExecLine>
+    <ExecString>mDatabase.execSQL(STAT_deleteTrack_1,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.deleteTrack(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="443" callLine="447"></Call>
+    </CallStack>
+  </Query>
+  <Query id="62">
+    <Value>DELETE FROM tracks WHERE trackid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>448</ExecLine>
+    <ExecString>mDatabase.execSQL(STAT_deleteTrack_2,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.deleteTrack(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="443" callLine="448"></Call>
+    </CallStack>
+  </Query>
+  <Query id="63">
+    <Value>{{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>470</ExecLine>
+    <ExecString>mDatabase.execSQL(String.format("INSERT INTO 'trackpoints' (trackid, lat, lon, alt, speed, date) SELECT %d, lat, lon, alt, speed, date FROM 'trackpoints' WHERE trackid IN (SELECT trackid FROM 'tracks' WHERE show = 1) ORDER BY date",newId))</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.JoinTracks()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="453" callLine="470"></Call>
+    </CallStack>
+  </Query>
+  <Query id="64">
+    <Value>SELECT MIN(date) FROM 'trackpoints' WHERE trackid = @1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>472</ExecLine>
+    <ExecString>mDatabase.rawQuery("SELECT MIN(date) FROM 'trackpoints' WHERE trackid = @1",args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.JoinTracks()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="453" callLine="472"></Call>
+    </CallStack>
+  </Query>
+  <Query id="65">
+    <Value>SELECT lat, lon, alt, speed, date FROM trackpoints ORDER BY id;</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>488</ExecLine>
+    <ExecString>db.rawQuery(STAT_saveTrackFromWriter,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.saveTrackFromWriter(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="485" callLine="488"></Call>
+    </CallStack>
+  </Query>
+  <Query id="66">
+    <Value>DELETE FROM 'trackpoints';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>528</ExecLine>
+    <ExecString>db.execSQL(STAT_CLEAR_TRACKPOINTS)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.saveTrackFromWriter(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="485" callLine="528"></Call>
+    </CallStack>
+  </Query>
+  <Query id="67">
+    <Value>SELECT mapid, name, type, params FROM 'maps';</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>538</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_get_maps,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getMixedMaps()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="536" callLine="538"></Call>
+    </CallStack>
+  </Query>
+  <Query id="68">
+    <Value>SELECT mapid, name, type, params FROM 'maps' WHERE mapid = @1;</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.kml</ExecPackage>
+    <ExecClass>GeoDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java</ExecFile>
+    <ExecLine>560</ExecLine>
+    <ExecString>mDatabase.rawQuery(STAT_get_map,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.kml.GeoDatabase.getMap(long)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" methodLine="556" callLine="560"></Call>
+    </CallStack>
+  </Query>
+  <Query id="69">
+    <Value>SELECT lat, lon FROM trackpoints ORDER BY id</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.overlays</ExecPackage>
+    <ExecClass>TrackThread</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/overlays/CurrentTrackOverlay.java</ExecFile>
+    <ExecLine>122</ExecLine>
+    <ExecString>db.rawQuery("SELECT lat, lon FROM trackpoints ORDER BY id",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.overlays.CurrentTrackOverlay.TrackThread.run()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/overlays/CurrentTrackOverlay.java" methodLine="104" callLine="122"></Call>
+    </CallStack>
+  </Query>
+  <Query id="70">
+    <Value>CREATE TABLE IF NOT EXISTS ListCashTables (name VARCHAR(100), lastmodified LONG NOT NULL, size LONG NOT NULL, minzoom INTEGER NOT NULL, maxzoom INTEGER NOT NULL, PRIMARY KEY(name) );</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>37</ExecLine>
+    <ExecString>this.mIndexDatabase.execSQL("CREATE TABLE IF NOT EXISTS ListCashTables (name VARCHAR(100), lastmodified LONG NOT NULL, size LONG NOT NULL, minzoom INTEGER NOT NULL, maxzoom INTEGER NOT NULL, PRIMARY KEY(name) );")</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.needIndex(java.lang.String,long,long,boolean)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="33" callLine="37"></Call>
+    </CallStack>
+  </Query>
+  <Query id="71">
+    <Value>SELECT COUNT(*) FROM ListCashTables</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>40</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT COUNT(*) FROM ListCashTables",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.needIndex(java.lang.String,long,long,boolean)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="33" callLine="40"></Call>
+    </CallStack>
+  </Query>
+  <Query id="72">
+    <Value>SELECT name, minzoom, maxzoom, size, lastmodified FROM ListCashTables</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>48</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT name, minzoom, maxzoom, size, lastmodified FROM ListCashTables",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.needIndex(java.lang.String,long,long,boolean)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="33" callLine="48"></Call>
+    </CallStack>
+  </Query>
+  <Query id="73">
+    <Value>SELECT size, lastmodified FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>65</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT size, lastmodified FROM ListCashTables WHERE lower(name) = lower('" + aCashTableName + "') OR lower(name) = lower('"+ aCashTableName.replace("usermap_","cahs_")+ "')",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.needIndex(java.lang.String,long,long,boolean)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="33" callLine="65"></Call>
+    </CallStack>
+  </Query>
+  <Query id="74">
+    <Value>SELECT * FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>85</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT * FROM ListCashTables WHERE lower(name) = lower('" + aCashTableName + "') OR lower(name) = lower('"+ aCashTableName.replace("usermap_","cahs_")+ "')",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.needIndex(java.lang.String,long,long,boolean)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="33" callLine="85"></Call>
+    </CallStack>
+  </Query>
+  <Query id="75">
+    <Value>CREATE TABLE IF NOT EXISTS ListCashTables (name VARCHAR(100), lastmodified LONG NOT NULL, size LONG NOT NULL, minzoom INTEGER NOT NULL, maxzoom INTEGER NOT NULL, PRIMARY KEY(name) );</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>102</ExecLine>
+    <ExecString>this.mIndexDatabase.execSQL("CREATE TABLE IF NOT EXISTS ListCashTables (name VARCHAR(100), lastmodified LONG NOT NULL, size LONG NOT NULL, minzoom INTEGER NOT NULL, maxzoom INTEGER NOT NULL, PRIMARY KEY(name) );")</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.CommitIndex(java.lang.String,long,long,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="101" callLine="102"></Call>
+    </CallStack>
+  </Query>
+  <Query id="76">
+    <Value>SELECT maxzoom FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>116</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT maxzoom FROM ListCashTables WHERE lower(name) = lower('" + mapid + "') OR lower(name) = lower('"+ mapid.replace("usermap_","cahs_")+ "')",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.ZoomMaxInCashFile(java.lang.String)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="113" callLine="116"></Call>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderTAR.updateMapParams(com.robert.maps.applib.tileprovider.TileSource)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" methodLine="108" callLine="110"></Call>
+    </CallStack>
+  </Query>
+  <Query id="77">
+    <Value>SELECT minzoom FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderFileBase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>133</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT minzoom FROM ListCashTables WHERE lower(name) = lower('" + mapid + "') OR lower(name) = lower('"+ mapid.replace("usermap_","cahs_")+ "')",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.ZoomMinInCashFile(java.lang.String)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="130" callLine="133"></Call>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderTAR.updateMapParams(com.robert.maps.applib.tileprovider.TileSource)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" methodLine="108" callLine="109"></Call>
+    </CallStack>
+  </Query>
+  <Query id="78">
+    <Value>DELETE FROM 'ListCashTables' WHERE name LIKE ('%sqlitedb')</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>IndexDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java</ExecFile>
+    <ExecLine>170</ExecLine>
+    <ExecString>db.execSQL(DELETE_FROM_ListCashTables)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderFileBase.IndexDatabaseHelper.onUpgrade(android.database.sqlite.SQLiteDatabase,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" methodLine="165" callLine="170"></Call>
+    </CallStack>
+  </Query>
+  <Query id="79">
+    <Value>DROP TABLE IF EXISTS '{{na}}'</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderMNM</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java</ExecFile>
+    <ExecLine>69</ExecLine>
+    <ExecString>this.mIndexDatabase.execSQL("DROP TABLE IF EXISTS '" + mMapID + "'")</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderMNM.CreateIndex()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java" methodLine="68" callLine="69"></Call>
+    </CallStack>
+  </Query>
+  <Query id="80">
+    <Value>CREATE TABLE IF NOT EXISTS '{{na}}' (x INTEGER NOT NULL, y INTEGER NOT NULL, z INTEGER NOT NULL, offset INTEGER NOT NULL, size INTEGER NOT NULL, PRIMARY KEY(x, y, z) );</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderMNM</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java</ExecFile>
+    <ExecLine>70</ExecLine>
+    <ExecString>this.mIndexDatabase.execSQL("CREATE TABLE IF NOT EXISTS '" + mMapID + "' (x INTEGER NOT NULL, y INTEGER NOT NULL, z INTEGER NOT NULL, offset INTEGER NOT NULL, size INTEGER NOT NULL, PRIMARY KEY(x, y, z) );")</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderMNM.CreateIndex()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java" methodLine="68" callLine="70"></Call>
+    </CallStack>
+  </Query>
+  <Query id="81">
+    <Value>SELECT offset, size FROM '{{na}}' WHERE x = {{na}} AND y = {{na}} AND z = {{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderMNM</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java</ExecFile>
+    <ExecLine>187</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT offset, size FROM '" + mMapID + "' WHERE x = "+ aX+ " AND y = "+ aY+ " AND z = "+ aZ,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderMNM.findMnmIndex(int,int,int,com.robert.maps.applib.tileprovider.TileProviderMNM.Param4ReadData)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java" methodLine="185" callLine="187"></Call>
+    </CallStack>
+  </Query>
+  <Query id="82">
+    <Value>DROP TABLE IF EXISTS '{{na}}'</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderTAR</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java</ExecFile>
+    <ExecLine>69</ExecLine>
+    <ExecString>this.mIndexDatabase.execSQL("DROP TABLE IF EXISTS '" + mMapID + "'")</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderTAR.CreateTarIndex()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" methodLine="68" callLine="69"></Call>
+    </CallStack>
+  </Query>
+  <Query id="83">
+    <Value>CREATE TABLE IF NOT EXISTS '{{na}}' (name VARCHAR(100), offset INTEGER NOT NULL, size INTEGER NOT NULL, PRIMARY KEY(name) );</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderTAR</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java</ExecFile>
+    <ExecLine>70</ExecLine>
+    <ExecString>this.mIndexDatabase.execSQL("CREATE TABLE IF NOT EXISTS '" + mMapID + "' (name VARCHAR(100), offset INTEGER NOT NULL, size INTEGER NOT NULL, PRIMARY KEY(name) );")</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderTAR.CreateTarIndex()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" methodLine="68" callLine="70"></Call>
+    </CallStack>
+  </Query>
+  <Query id="84">
+    <Value>SELECT offset, size FROM '{{na}}' WHERE name = '{{na}}.jpg' OR name = '{{na}}.png'</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.tileprovider</ExecPackage>
+    <ExecClass>TileProviderTAR</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java</ExecFile>
+    <ExecLine>95</ExecLine>
+    <ExecString>this.mIndexDatabase.rawQuery("SELECT offset, size FROM '" + mMapID + "' WHERE name = '"+ aName+ ".jpg' OR name = '"+ aName+ ".png'",null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.tileprovider.TileProviderTAR.findTarIndex(java.lang.String,com.robert.maps.applib.tileprovider.TileProviderTAR.Param4ReadData)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" methodLine="93" callLine="95"></Call>
+    </CallStack>
+  </Query>
+  <Query id="85">
+    <Value>CREATE TABLE IF NOT EXISTS 'trackpoints' (trackid INTEGER NOT NULL, id INTEGER NOT NULL PRIMARY KEY UNIQUE, lat FLOAT, lon FLOAT, alt FLOAT, speed FLOAT, date DATETIME);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.trackwriter</ExecPackage>
+    <ExecClass>DatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/trackwriter/DatabaseHelper.java</ExecFile>
+    <ExecLine>17</ExecLine>
+    <ExecString>db.execSQL(PoiConstants.SQL_CREATE_trackpoints)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.trackwriter.DatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/trackwriter/DatabaseHelper.java" methodLine="15" callLine="17"></Call>
+    </CallStack>
+  </Query>
+  <Query id="86">
+    <Value>CREATE TABLE IF NOT EXISTS tiles (x int, y int, z int, s int, image blob, PRIMARY KEY (x,y,z,s));</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>CashDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>139</ExecLine>
+    <ExecString>db.execSQL(SQL_CREATE_tiles)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.CashDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="137" callLine="139"></Call>
+    </CallStack>
+  </Query>
+  <Query id="87">
+    <Value>CREATE TABLE IF NOT EXISTS info (maxzoom Int, minzoom Int, params VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>CashDatabaseHelper</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>140</ExecLine>
+    <ExecString>db.execSQL(SQL_CREATE_info)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.CashDatabaseHelper.onCreate(android.database.sqlite.SQLiteDatabase)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="137" callLine="140"></Call>
+    </CallStack>
+  </Query>
+  <Query id="88">
+    <Value>{{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>164</ExecLine>
+    <ExecString>this.mDatabase[i].compileStatement(SQL_GET_MINZOOM).simpleQueryForLong()</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.updateMinMaxZoom()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="154" callLine="164"></Call>
+    </CallStack>
+  </Query>
+  <Query id="89">
+    <Value>{{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>170</ExecLine>
+    <ExecString>this.mDatabase[i].compileStatement(SQL_GET_MAXZOOM).simpleQueryForLong()</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.updateMinMaxZoom()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="154" callLine="170"></Call>
+    </CallStack>
+  </Query>
+  <Query id="90">
+    <Value>SELECT image as ret FROM tiles WHERE x = {{question}} AND y = {{question}} AND z = {{question}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>220</ExecLine>
+    <ExecString>this.mDatabase[j].rawQuery(SQL_SELECT_IMAGE,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.getTile(int,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="208" callLine="220"></Call>
+    </CallStack>
+  </Query>
+  <Query id="91">
+    <Value>SELECT image as ret FROM tiles WHERE x = {{question}} AND y = {{question}} AND z = {{question}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>261</ExecLine>
+    <ExecString>this.mDatabase[i].rawQuery(SQL_SELECT_IMAGE,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.existsTile(int,int,int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="256" callLine="261"></Call>
+    </CallStack>
+  </Query>
+  <Query id="92">
+    <Value>DROP TABLE IF EXISTS tiles</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>306</ExecLine>
+    <ExecString>mDatabase[i].execSQL(SQL_DROP_tiles)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.clearTiles()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="303" callLine="306"></Call>
+    </CallStack>
+  </Query>
+  <Query id="93">
+    <Value>CREATE TABLE IF NOT EXISTS tiles (x int, y int, z int, s int, image blob, PRIMARY KEY (x,y,z,s));</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>307</ExecLine>
+    <ExecString>mDatabase[i].execSQL(SQL_CREATE_tiles)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.clearTiles()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="303" callLine="307"></Call>
+    </CallStack>
+  </Query>
+  <Query id="94">
+    <Value>{{na}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>315</ExecLine>
+    <ExecString>mDatabase[0].compileStatement(SQL_tiles_count).simpleQueryForLong()</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.getTileLenght()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="312" callLine="315"></Call>
+    </CallStack>
+  </Query>
+  <Query id="95">
+    <Value>SELECT * FROM info</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>330</ExecLine>
+    <ExecString>this.mDatabase[i].rawQuery(SQL_SELECT_PARAMS,null)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.getParams()" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="324" callLine="330"></Call>
+    </CallStack>
+  </Query>
+  <Query id="96">
+    <Value>UPDATE info SET params = {{question}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>389</ExecLine>
+    <ExecString>this.mDatabase[i].execSQL(SQL_UPDATE_PARAMS,arg)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.setParams(java.lang.String,java.lang.String,int[],int[],int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="362" callLine="389"></Call>
+    </CallStack>
+  </Query>
+  <Query id="97">
+    <Value>DROP TABLE IF EXISTS info</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>392</ExecLine>
+    <ExecString>this.mDatabase[i].execSQL(SQL_DROP_info)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.setParams(java.lang.String,java.lang.String,int[],int[],int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="362" callLine="392"></Call>
+    </CallStack>
+  </Query>
+  <Query id="98">
+    <Value>CREATE TABLE IF NOT EXISTS info (maxzoom Int, minzoom Int, params VARCHAR);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>393</ExecLine>
+    <ExecString>this.mDatabase[i].execSQL(SQL_CREATE_info)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.setParams(java.lang.String,java.lang.String,int[],int[],int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="362" callLine="393"></Call>
+    </CallStack>
+  </Query>
+  <Query id="99">
+    <Value>INSERT OR IGNORE INTO info (rowid, minzoom, maxzoom) SELECT 1, 0, 0;</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>394</ExecLine>
+    <ExecString>this.mDatabase[i].execSQL(SQL_INIT_INFO)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.setParams(java.lang.String,java.lang.String,int[],int[],int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="362" callLine="394"></Call>
+    </CallStack>
+  </Query>
+  <Query id="100">
+    <Value>UPDATE info SET minzoom = (SELECT DISTINCT z FROM tiles ORDER BY z ASC LIMIT 1);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>395</ExecLine>
+    <ExecString>this.mDatabase[i].execSQL(SQL_UPDZOOM_UPDMIN)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.setParams(java.lang.String,java.lang.String,int[],int[],int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="362" callLine="395"></Call>
+    </CallStack>
+  </Query>
+  <Query id="101">
+    <Value>UPDATE info SET maxzoom = (SELECT DISTINCT z FROM tiles ORDER BY z DESC LIMIT 1);</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>396</ExecLine>
+    <ExecString>this.mDatabase[i].execSQL(SQL_UPDZOOM_UPDMAX)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.setParams(java.lang.String,java.lang.String,int[],int[],int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="362" callLine="396"></Call>
+    </CallStack>
+  </Query>
+  <Query id="102">
+    <Value>UPDATE info SET params = {{question}}</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>397</ExecLine>
+    <ExecString>this.mDatabase[i].execSQL(SQL_UPDATE_PARAMS,arg)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.setParams(java.lang.String,java.lang.String,int[],int[],int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="362" callLine="397"></Call>
+    </CallStack>
+  </Query>
+  <Query id="103">
+    <Value>SELECT x, y FROM tiles WHERE z = {{question}} LIMIT 1</Value>
+    <HotspotFinder>AndroidHotspotFinder</HotspotFinder>
+    <ExecPackage>com.robert.maps.applib.utils</ExecPackage>
+    <ExecClass>SQLiteMapDatabase</ExecClass>
+    <ExecFile>C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java</ExecFile>
+    <ExecLine>413</ExecLine>
+    <ExecString>this.mDatabase[i].rawQuery(SQL_FINDTHEMAP,args)</ExecString>
+    <CallStack>
+      <Call method="com.robert.maps.applib.utils.SQLiteMapDatabase.findTheMap(int)" file="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" methodLine="407" callLine="413"></Call>
+    </CallStack>
+  </Query>
+</Queries>
