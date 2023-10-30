@@ -1,5 +1,7 @@
 # INFOM218-project-RMaps
 
+Evolution de systèmes logiciels (groupe n°4)
+
 ## Description
 Dans ce projet, nous jouerons le rôle de consultants experts, dont la mission est d'analyser, de comprendre et d'évaluer un système réel centré sur les données. L'objectif général est de faire de la rétro-ingénierie sur la base de données de l'application étudiée, et d'évaluer la qualité du schéma de la base de données et des programmes de manipulation de la base de données.
 
