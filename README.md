@@ -11,6 +11,10 @@ Ce répo contient l'ensemble des résultats obtenus lors des étapes 1 à 4 de l
 
 ### Step 1
 
+L'étape 1 contient :
+- Tous les schémas de base de données (PS, LS et CS)
+- Les requêtes SQL du programme 
+
 ### Step 2
 
 ### Step 3
