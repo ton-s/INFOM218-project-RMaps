@@ -1,0 +1,103 @@
+SELECT lat, lon, points.name, descr, pointid, pointid _id, pointid ID, category.iconid, category.name as catname FROM points LEFT JOIN category ON category.categoryid = points.categoryid ORDER BY {{na}}
+SELECT lat, lon, points.name, descr, pointid, pointid _id, pointid ID, category.iconid, category.name as catname FROM points LEFT JOIN category ON category.categoryid = points.categoryid ORDER BY lat, lon
+SELECT poi.lat, poi.lon, poi.name, poi.descr, poi.pointid, poi.pointid _id, poi.pointid ID, poi.categoryid, cat.iconid FROM points poi LEFT JOIN category cat ON cat.categoryid = poi.categoryid WHERE poi.hidden = 0 AND cat.hidden = 0 AND cat.minzoom <= @1 AND poi.lon BETWEEN @2 AND @3 AND poi.lat BETWEEN @4 AND @5 ORDER BY lat, lon
+SELECT name, iconid, categoryid _id, hidden FROM category ORDER BY name
+SELECT name, activityid _id FROM activity ORDER BY activityid
+SELECT lat, lon, name, descr, pointid, alt, hidden, categoryid, pointsourceid, iconid FROM points WHERE pointid = @1
+DELETE FROM points WHERE pointid = @1
+DELETE FROM category WHERE categoryid = @1
+CREATE TABLE 'points' (pointid INTEGER NOT NULL PRIMARY KEY UNIQUE,name VARCHAR,descr VARCHAR,lat FLOAT DEFAULT '0',lon FLOAT DEFAULT '0',alt FLOAT DEFAULT '0',hidden INTEGER DEFAULT '0',categoryid INTEGER,pointsourceid INTEGER,iconid INTEGER DEFAULT NULL);
+CREATE TABLE IF NOT EXISTS 'pointsource' (pointsourceid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR);
+CREATE TABLE 'category' (categoryid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, hidden INTEGER DEFAULT '0', iconid INTEGER DEFAULT NULL, minzoom INTEGER DEFAULT '14');
+INSERT INTO 'category' (categoryid, name, hidden, iconid) VALUES (0, 'My POI', 0, 2130837516);
+CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);
+CREATE TABLE IF NOT EXISTS 'trackpoints' (trackid INTEGER NOT NULL, id INTEGER NOT NULL PRIMARY KEY UNIQUE, lat FLOAT, lon FLOAT, alt FLOAT, speed FLOAT, date DATETIME);
+CREATE TABLE IF NOT EXISTS 'maps' (mapid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, type INTEGER, params VARCHAR)
+CREATE TABLE IF NOT EXISTS 'routes' (routeid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, style VARCHAR);
+DROP TABLE IF EXISTS 'points_45392250';
+CREATE TABLE 'points_45392250' AS SELECT * FROM 'points';
+DROP TABLE 'points';
+CREATE TABLE 'points' (pointid INTEGER NOT NULL PRIMARY KEY UNIQUE,name VARCHAR,descr VARCHAR,lat FLOAT DEFAULT '0',lon FLOAT DEFAULT '0',alt FLOAT DEFAULT '0',hidden INTEGER DEFAULT '0',categoryid INTEGER,pointsourceid INTEGER,iconid INTEGER DEFAULT NULL);
+INSERT INTO 'points' (pointid, name, descr, lat, lon, alt, hidden, categoryid, pointsourceid, iconid) SELECT pointid, name, descr, lat, lon, alt, hidden, categoryid, pointsourceid, 2130837514 FROM 'points_45392250';
+DROP TABLE 'points_45392250';
+DROP TABLE IF EXISTS 'category_46134312';
+CREATE TABLE 'category_46134312' AS SELECT * FROM 'category';
+DROP TABLE 'category';
+CREATE TABLE 'category' (categoryid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, hidden INTEGER DEFAULT '0', iconid INTEGER DEFAULT NULL, minzoom INTEGER DEFAULT '14');
+INSERT INTO 'category' (categoryid, name, hidden, iconid) VALUES (0, 'My POI', 0, 2130837516);
+DROP TABLE IF EXISTS 'category_46134313';
+CREATE TABLE 'category_46134313' AS SELECT * FROM 'category';
+DROP TABLE 'category';
+CREATE TABLE 'category' (categoryid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, hidden INTEGER DEFAULT '0', iconid INTEGER DEFAULT NULL, minzoom INTEGER DEFAULT '14');
+INSERT INTO 'category' (categoryid, name, hidden, iconid) SELECT categoryid, name, hidden, iconid FROM 'category_46134313';
+DROP TABLE 'category_46134313';
+CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);
+CREATE TABLE IF NOT EXISTS 'trackpoints' (trackid INTEGER NOT NULL, id INTEGER NOT NULL PRIMARY KEY UNIQUE, lat FLOAT, lon FLOAT, alt FLOAT, speed FLOAT, date DATETIME);
+DROP TABLE IF EXISTS 'tracks_46134313';
+CREATE TABLE 'tracks_46134313' AS SELECT * FROM 'tracks';
+DROP TABLE IF EXISTS 'tracks';
+CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);
+INSERT INTO 'tracks' (trackid, name, descr, date, show, cnt, duration, distance, categoryid, activity) SELECT trackid, name, descr, date, show, (SELECT COUNT(*) FROM trackpoints WHERE trackid = tracks_46134313.trackid), null, null, null, 0 FROM 'tracks_46134313';
+DROP TABLE 'tracks_46134313';
+DROP TABLE IF EXISTS 'tracks_46134313';
+CREATE TABLE 'tracks_46134313' AS SELECT * FROM 'tracks';
+DROP TABLE IF EXISTS 'tracks';
+CREATE TABLE IF NOT EXISTS 'tracks' (trackid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, cnt INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, activity INTEGER, style VARCHAR);
+INSERT INTO 'tracks' (trackid, name, descr, date, show, cnt, duration, distance, categoryid, activity, style) SELECT trackid, name, descr, date, show, cnt, duration, distance, categoryid, activity, '' FROM 'tracks_46134313';
+DROP TABLE 'tracks_46134313';
+CREATE TABLE IF NOT EXISTS 'maps' (mapid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, type INTEGER, params VARCHAR)
+CREATE TABLE IF NOT EXISTS 'routes' (routeid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR, descr VARCHAR, date DATETIME, show INTEGER, duration INTEGER, distance INTEGER, categoryid INTEGER, style VARCHAR);
+SELECT name, categoryid, hidden, iconid, minzoom FROM category WHERE categoryid = @1
+DROP TABLE IF EXISTS 'activity';
+CREATE TABLE 'activity' (activityid INTEGER NOT NULL PRIMARY KEY UNIQUE, name VARCHAR);
+{{na}}
+DELETE FROM points
+{{na}}
+SELECT name, descr, show, trackid, cnt, distance, duration, categoryid, activity, date, style FROM tracks WHERE show = 1
+SELECT name, descr, show, cnt, distance, duration, categoryid, activity, date, style FROM tracks WHERE trackid = @1
+SELECT lat, lon, alt, speed, date FROM trackpoints WHERE trackid = @1 ORDER BY id
+UPDATE tracks SET show = 1 - show * 1 WHERE trackid = @1
+UPDATE category SET hidden = 1 - hidden * 1 WHERE categoryid = @1
+DELETE FROM trackpoints WHERE trackid = @1
+DELETE FROM tracks WHERE trackid = @1
+{{na}}
+SELECT MIN(date) FROM 'trackpoints' WHERE trackid = @1
+SELECT lat, lon, alt, speed, date FROM trackpoints ORDER BY id;
+DELETE FROM 'trackpoints';
+SELECT mapid, name, type, params FROM 'maps';
+SELECT mapid, name, type, params FROM 'maps' WHERE mapid = @1;
+SELECT lat, lon FROM trackpoints ORDER BY id
+CREATE TABLE IF NOT EXISTS ListCashTables (name VARCHAR(100), lastmodified LONG NOT NULL, size LONG NOT NULL, minzoom INTEGER NOT NULL, maxzoom INTEGER NOT NULL, PRIMARY KEY(name) );
+SELECT COUNT(*) FROM ListCashTables
+SELECT name, minzoom, maxzoom, size, lastmodified FROM ListCashTables
+SELECT size, lastmodified FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')
+SELECT * FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')
+CREATE TABLE IF NOT EXISTS ListCashTables (name VARCHAR(100), lastmodified LONG NOT NULL, size LONG NOT NULL, minzoom INTEGER NOT NULL, maxzoom INTEGER NOT NULL, PRIMARY KEY(name) );
+SELECT maxzoom FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')
+SELECT minzoom FROM ListCashTables WHERE lower(name) = lower('{{na}}') OR lower(name) = lower('{{na}}')
+DELETE FROM 'ListCashTables' WHERE name LIKE ('%sqlitedb')
+DROP TABLE IF EXISTS '{{na}}'
+CREATE TABLE IF NOT EXISTS '{{na}}' (x INTEGER NOT NULL, y INTEGER NOT NULL, z INTEGER NOT NULL, offset INTEGER NOT NULL, size INTEGER NOT NULL, PRIMARY KEY(x, y, z) );
+SELECT offset, size FROM '{{na}}' WHERE x = {{na}} AND y = {{na}} AND z = {{na}}
+DROP TABLE IF EXISTS '{{na}}'
+CREATE TABLE IF NOT EXISTS '{{na}}' (name VARCHAR(100), offset INTEGER NOT NULL, size INTEGER NOT NULL, PRIMARY KEY(name) );
+SELECT offset, size FROM '{{na}}' WHERE name = '{{na}}.jpg' OR name = '{{na}}.png'
+CREATE TABLE IF NOT EXISTS 'trackpoints' (trackid INTEGER NOT NULL, id INTEGER NOT NULL PRIMARY KEY UNIQUE, lat FLOAT, lon FLOAT, alt FLOAT, speed FLOAT, date DATETIME);
+CREATE TABLE IF NOT EXISTS tiles (x int, y int, z int, s int, image blob, PRIMARY KEY (x,y,z,s));
+CREATE TABLE IF NOT EXISTS info (maxzoom Int, minzoom Int, params VARCHAR);
+{{na}}
+{{na}}
+SELECT image as ret FROM tiles WHERE x = {{question}} AND y = {{question}} AND z = {{question}}
+SELECT image as ret FROM tiles WHERE x = {{question}} AND y = {{question}} AND z = {{question}}
+DROP TABLE IF EXISTS tiles
+CREATE TABLE IF NOT EXISTS tiles (x int, y int, z int, s int, image blob, PRIMARY KEY (x,y,z,s));
+{{na}}
+SELECT * FROM info
+UPDATE info SET params = {{question}}
+DROP TABLE IF EXISTS info
+CREATE TABLE IF NOT EXISTS info (maxzoom Int, minzoom Int, params VARCHAR);
+INSERT OR IGNORE INTO info (rowid, minzoom, maxzoom) SELECT 1, 0, 0;
+UPDATE info SET minzoom = (SELECT DISTINCT z FROM tiles ORDER BY z ASC LIMIT 1);
+UPDATE info SET maxzoom = (SELECT DISTINCT z FROM tiles ORDER BY z DESC LIMIT 1);
+UPDATE info SET params = {{question}}
+SELECT x, y FROM tiles WHERE z = {{question}} LIMIT 1
