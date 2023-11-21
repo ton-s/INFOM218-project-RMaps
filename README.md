@@ -19,6 +19,9 @@ L'étape 1 contient :
 
 ### Step 2
 
+L'étape 2 contient :
+- Le sous schéma logique utilisé par le programme
+
 ### Step 3
 
 ### Step 4
