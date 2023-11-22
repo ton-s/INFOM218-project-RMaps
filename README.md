@@ -21,6 +21,7 @@ L'étape 1 contient :
 
 L'étape 2 contient :
 - Le sous schéma logique utilisé par le programme
+- Lesstatistiques détaillées sur les requêtes de la base de données
 
 ### Step 3
 
