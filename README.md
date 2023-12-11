@@ -7,7 +7,7 @@ Dans ce projet, nous jouerons le rôle de consultants experts, dont la mission e
 
 Dans notre situation, nous allons examiner l'application Android appelée **RMaps**. Cette application a été entièrement développée en utilisant le langage Java et vise à permettre la visualisation de cartes de diverses natures.
 
-code source **RMaps** : https://github.com/RobertDeveloper/RMaps.0.9.x
+code source : https://github.com/RobertDeveloper/RMaps.0.9.x
 
 ## Contenu
 
@@ -23,7 +23,7 @@ L'étape 1 contient :
 
 L'étape 2 contient :
 - Le sous schéma logique utilisé par le programme
-- Lesstatistiques détaillées sur les requêtes de la base de données
+- Les statistiques détaillées sur les requêtes de la base de données
 
 ### Step 3
 
