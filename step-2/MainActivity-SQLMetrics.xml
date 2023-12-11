@@ -1,0 +1,367 @@
+<?xml version="1.0" ?>
+<Metrics>
+  <Database>
+    <Statement Id="140" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="84">
+      <Metrics>
+        <Metric name="Fields" value="9"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="180" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="84">
+      <Metrics>
+        <Metric name="Fields" value="9"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="265" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="94">
+      <Metrics>
+        <Metric name="Fields" value="9"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="278" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="103">
+      <Metrics>
+        <Metric name="Fields" value="4"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="289" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="112">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="306" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="122">
+      <Metrics>
+        <Metric name="Fields" value="10"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="308" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="131">
+    </Statement>
+    <Statement Id="313" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="138">
+    </Statement>
+    <Statement Id="318" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="197">
+    </Statement>
+    <Statement Id="367" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="198">
+    </Statement>
+    <Statement Id="379" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="199">
+    </Statement>
+    <Statement Id="406" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="200">
+    </Statement>
+    <Statement Id="419" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="201">
+    </Statement>
+    <Statement Id="459" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="202">
+    </Statement>
+    <Statement Id="487" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="203">
+    </Statement>
+    <Statement Id="505" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="204">
+    </Statement>
+    <Statement Id="538" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="214">
+    </Statement>
+    <Statement Id="540" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="215">
+    </Statement>
+    <Statement Id="548" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="216">
+    </Statement>
+    <Statement Id="550" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="217">
+    </Statement>
+    <Statement Id="585" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="218">
+      <Metrics>
+        <Metric name="Fields" value="10"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="611" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="219">
+    </Statement>
+    <Statement Id="613" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="220">
+    </Statement>
+    <Statement Id="615" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="221">
+    </Statement>
+    <Statement Id="623" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="222">
+    </Statement>
+    <Statement Id="625" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="223">
+    </Statement>
+    <Statement Id="646" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="224">
+    </Statement>
+    <Statement Id="659" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="229">
+    </Statement>
+    <Statement Id="661" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="230">
+    </Statement>
+    <Statement Id="669" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="231">
+    </Statement>
+    <Statement Id="671" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="232">
+    </Statement>
+    <Statement Id="692" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="233">
+      <Metrics>
+        <Metric name="Fields" value="4"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="706" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="234">
+    </Statement>
+    <Statement Id="708" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="237">
+    </Statement>
+    <Statement Id="735" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="238">
+    </Statement>
+    <Statement Id="755" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="241">
+    </Statement>
+    <Statement Id="757" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="242">
+    </Statement>
+    <Statement Id="765" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="243">
+    </Statement>
+    <Statement Id="767" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="244">
+    </Statement>
+    <Statement Id="794" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="245">
+      <Metrics>
+        <Metric name="Fields" value="10"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="833" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="246">
+    </Statement>
+    <Statement Id="835" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="250">
+    </Statement>
+    <Statement Id="837" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="251">
+    </Statement>
+    <Statement Id="844" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="252">
+    </Statement>
+    <Statement Id="846" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="253">
+    </Statement>
+    <Statement Id="873" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="254">
+      <Metrics>
+        <Metric name="Fields" value="11"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="901" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="255">
+    </Statement>
+    <Statement Id="903" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="258">
+    </Statement>
+    <Statement Id="916" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="261">
+    </Statement>
+    <Statement Id="949" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="271">
+      <Metrics>
+        <Metric name="Fields" value="5"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="951" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="278">
+    </Statement>
+    <Statement Id="953" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="279">
+    </Statement>
+    <Statement Id="965" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="314">
+    </Statement>
+    <Statement Id="983" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="402">
+      <Metrics>
+        <Metric name="Fields" value="11"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1000" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="412">
+      <Metrics>
+        <Metric name="Fields" value="10"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1015" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="422">
+      <Metrics>
+        <Metric name="Fields" value="5"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1025" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="431">
+    </Statement>
+    <Statement Id="1038" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="439">
+    </Statement>
+    <Statement Id="1043" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="447">
+    </Statement>
+    <Statement Id="1048" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="448">
+    </Statement>
+    <Statement Id="1064" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="472">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1076" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="488">
+      <Metrics>
+        <Metric name="Fields" value="5"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1078" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="528">
+    </Statement>
+    <Statement Id="1086" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="538">
+      <Metrics>
+        <Metric name="Fields" value="4"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1097" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/kml/GeoDatabase.java" Line="560">
+      <Metrics>
+        <Metric name="Fields" value="4"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1106" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/overlays/CurrentTrackOverlay.java" Line="122">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1108" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" Line="69">
+    </Statement>
+    <Statement Id="1110" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" Line="70">
+    </Statement>
+    <Statement Id="1138" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderTAR.java" Line="95">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1140" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="37">
+    </Statement>
+    <Statement Id="1170" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="40">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1179" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="48">
+      <Metrics>
+        <Metric name="Fields" value="5"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1209" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="65">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1237" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="85">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1239" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="102">
+    </Statement>
+    <Statement Id="1283" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="116">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1311" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="133">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1313" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderFileBase.java" Line="170">
+    </Statement>
+    <Statement Id="1318" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java" Line="69">
+    </Statement>
+    <Statement Id="1320" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java" Line="70">
+    </Statement>
+    <Statement Id="1358" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/tileprovider/TileProviderMNM.java" Line="187">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1360" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/trackwriter/DatabaseHelper.java" Line="17">
+    </Statement>
+    <Statement Id="1380" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="139">
+    </Statement>
+    <Statement Id="1402" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="140">
+    </Statement>
+    <Statement Id="1430" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="220">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1448" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="261">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1450" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="306">
+    </Statement>
+    <Statement Id="1452" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="307">
+    </Statement>
+    <Statement Id="1471" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="330">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1477" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="389">
+    </Statement>
+    <Statement Id="1479" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="392">
+    </Statement>
+    <Statement Id="1481" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="393">
+    </Statement>
+    <Statement Id="1489" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="394">
+      <Metrics>
+        <Metric name="Fields" value="3"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1512" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="395">
+      <Metrics>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1526" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="396">
+      <Metrics>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1532" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="397">
+    </Statement>
+    <Statement Id="1543" Path="C:/Users/anton/Documents/Programmation/CodeUnif/EVO/RMaps.0.9.x/app/src/main/java/com/robert/maps/applib/utils/SQLiteMapDatabase.java" Line="413">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+</Database>  
+</Metrics>
